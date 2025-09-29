@@ -1,0 +1,29 @@
+hidden_layer :
+    neuron 1:
+      weights:
+        -0.8919667
+        -0.72339505
+      bias :
+        0
+    neuron 2:
+      weights:
+	    -1.0266986
+	    -0.69533604
+      bias :
+        0
+    neuron 3:
+      weights:
+	     1.2751268
+	     1.2740276
+      bias :
+        0.00023717
+
+
+output:
+  weights:
+    -0.9056227
+    -1.0950059
+     0.7894558
+  bias:
+    -0.00453761
+
