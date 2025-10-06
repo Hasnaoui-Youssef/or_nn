@@ -1,16 +1,20 @@
 # vhdl files
-FILES = src/*.vhd
+
+PKG_FILES = src/types.vhd
+SRC_FILES = src/accumulator.vhd \
+			src/neuron.vhd
+FILES = $(PKG_FILES) $(SRC_FILES)
 
 # testbench
-TESTBENCHPATH = testbench/${TESTBENCHFILE}.vhd
 TESTBENCHFILE = ${TESTBENCH}_tb
+TESTBENCHPATH = src/${TESTBENCHFILE}.vhd
 WORKDIR = work
 
 #GHDL CONFIG
 GHDL_CMD = ghdl
-GHDL_FLAGS  = --std=08 --ieee=synopsys --warn-no-vital-generic --workdir=$(WORKDIR)
+GHDL_FLAGS  = --std=08 --workdir=$(WORKDIR)
 
-STOP_TIME = 1000ns
+STOP_TIME = 150ns
 # Simulation break condition
 #GHDL_SIM_OPT = --assert-level=error
 GHDL_SIM_OPT = --stop-time=$(STOP_TIME)

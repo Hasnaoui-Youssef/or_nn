@@ -22,7 +22,38 @@ entity neuron is
     );
 end entity neuron;
 
-architecture rtl of neuron is
 
+architecture rtl of neuron is
+    component accumulator is
+        generic(
+            size : integer := 3
+        );
+        port(
+            clk : in std_logic;
+            rst : in std_logic;
+            values : in  sfixed_bus_array(size - 1 downto 0);
+            weights : in sfixed_bus_array(size downto 0);
+            input_en : in std_logic;
+            result : out sfixed_bus;
+            done_o : out std_logic
+        );
+    end component accumulator;
+
+    signal acc_output : sfixed_bus;
 begin
+    accumulator_inst: accumulator
+     generic map(
+        size => inputs
+    )
+     port map(
+        clk => clk,
+        rst => reset,
+        values => input_i,
+        weights => weights_i,
+        input_en => start_en,
+        result => acc_output,
+        done_o => done
+    );
+
+    output_o <= acc_output when (acc_output >= 0 and done = '1') else to_sfixed_a(0);
 end architecture rtl;

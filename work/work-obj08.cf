@@ -1,0 +1,13 @@
+v 4
+file "/home/youssef/projects/vhdl_projects/neural_net/" "src/neuron_tb.vhd" "ea678757dc7b4ae2fd209358b0c7131a9b1f8cb4" "20251003154016.928":
+  entity neuron_tb at 1( 0) + 0 on 17;
+  architecture tb of neuron_tb at 11( 158) + 0 on 18;
+file "/home/youssef/projects/vhdl_projects/neural_net/" "src/types.vhd" "a699cff210832fabe1b17070f57bb01736fd2398" "20251003154016.900":
+  package types at 1( 0) + 0 on 11 body;
+  package body types at 28( 777) + 0 on 12;
+file "/home/youssef/projects/vhdl_projects/neural_net/" "src/accumulator.vhd" "e7602b33008f3640197e87e5914f6208e4f30380" "20251003154016.901":
+  entity accumulator at 1( 0) + 0 on 13;
+  architecture rtl of accumulator at 94( 3065) + 0 on 14;
+file "/home/youssef/projects/vhdl_projects/neural_net/" "src/neuron.vhd" "967d4127a0ac94b07bf0f12bdcd8c933dd8b74a9" "20251003154016.902":
+  entity neuron at 1( 0) + 0 on 15;
+  architecture rtl of neuron at 26( 563) + 0 on 16;
