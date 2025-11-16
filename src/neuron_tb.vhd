@@ -62,6 +62,6 @@ begin
     output_r <= to_real(output_o);
 
 
-    input_i <= ( (to_sfixed_a(0)), to_sfixed_a(20));
+    input_i <= ( (to_sfixed_a(10)), to_sfixed_a(20));
     start_en <= '0', '1' after 15 ns, '0' after 30 ns;
 end architecture tb;

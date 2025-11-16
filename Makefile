@@ -38,11 +38,11 @@ endif
 	@$(GHDL_CMD) -e $(GHDL_FLAGS) $(TESTBENCHFILE)
 
 run:
-	@$(GHDL_CMD) -r $(GHDL_FLAGS) --workdir=$(WORKDIR) $(TESTBENCHFILE) --vcd=$(TESTBENCHFILE).vcd $(GHDL_SIM_OPT)
-	@mv $(TESTBENCHFILE).vcd $(WORKDIR)/
+	@$(GHDL_CMD) -r $(GHDL_FLAGS) --workdir=$(WORKDIR) $(TESTBENCHFILE) --wave=$(TESTBENCHFILE).ghw $(GHDL_SIM_OPT)
+	@mv $(TESTBENCHFILE).ghw $(WORKDIR)/
 
 view:
-	@$(WAVEFORM_VIEWER) --dump=$(WORKDIR)/$(TESTBENCHFILE).vcd
+	@$(WAVEFORM_VIEWER) --dump=$(WORKDIR)/$(TESTBENCHFILE).ghw
 
 clean:
 	@rm -rf $(WORKDIR)
